@@ -1,0 +1,6 @@
+#lang racket
+
+(define (fold f a n)
+  (if (zero? n)
+      a
+      (f (sub1 n) (fold f a (sub1 n)))))
